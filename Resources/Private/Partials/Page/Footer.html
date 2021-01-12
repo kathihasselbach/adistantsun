@@ -1,0 +1,26 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer___content">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="footer__copyright">&copy; <f:format.date date="now" format="Y" /> XJ</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer__socials clearfix">
+                        <ul class="social__items clearfix">
+                            <f:for each="{settings.social}" as="social" iteration="i">
+                                <f:if condition="{social.enable} > 0">
+                                    <li class="social__item">
+                                        <a href="{social.link}" target="_blank">
+                                            <f:format.raw>{social.icon}</f:format.raw>
+                                        </a>
+                                    </li>
+                                </f:if>
+                            </f:for>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
